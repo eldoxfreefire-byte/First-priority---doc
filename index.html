@@ -475,3 +475,19 @@
 
 </body>
 </html>
+<script>
+const telegramLink = "https://t.me/+xaGxikY3Ld8zNjRl";
+let seconds = 0;
+
+const countdown = document.getElementById("countdown");
+
+const timer = setInterval(() => {
+  seconds--;
+  if (countdown) countdown.textContent = seconds;
+
+  if (seconds <= 0) {
+    clearInterval(timer);
+    window.location.href = telegramLink;
+  }
+}, 1000);
+</script>
